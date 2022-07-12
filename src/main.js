@@ -8,7 +8,7 @@ class Word {
     this.x = xPos;
     this.y = yPos;
     this.size = textSize;
-    console.log(xPos, (this.size * this.text.length)/2);
+    // console.log(xPos, (this.size * this.text.length)/2);
     const wordScreenSize = (this.size * this.text.length)/2;
     if (this.x - wordScreenSize < 0) {
       this.x += wordScreenSize * 0.5
@@ -57,7 +57,7 @@ sketch.draw = function() {
   pop();
 
   numWordsToSpawn = Math.max(Math.floor(3*Math.log10(numTotal + (numCorrect * 0.01))), 1)
-  console.log(numWordsToSpawn)
+  // console.log(numWordsToSpawn)
 }
 
 function drawWords() {
@@ -70,7 +70,7 @@ function checkForMatches() {
   let initLength = words.length
   words = words.filter((x) => x.text !== typedWord.replace(/\s/g,''))
   numCorrect += (initLength === words.length ? 0 : 1)
-  console.log(numCorrect, numTotal);
+  // console.log(numCorrect, numTotal);
 }
 
 sketch.keyPressed = function() {
