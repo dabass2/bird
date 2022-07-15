@@ -77,7 +77,7 @@ sketch.draw = function() {
   numWordsToSpawn = Math.max(Math.floor(3*Math.log10(numMissed + (numCorrect * (0.01*windowWidth)))), 1)
 
   if (numMissed !== 0 && numMissed > Math.floor((numMissed + numCorrect)*0.5)) {
-    if (soundOn) new Audio('/assets/game_over.mp3').play()
+    if (soundOn) new Audio('https://leinad.dev/bird/game_over.mp3').play()
     noLoop()
     background(soundOn ? '#964B00' : 0);
     text(`GAME OVER\nScore: ${numCorrect}`, windowWidth/2, windowHeight/2)
@@ -110,7 +110,7 @@ function checkForMatches() {
   if (initLength > words.length) {
     numCorrect++;
     let num = Math.ceil(Math.random()*NUM_CORRECT_SOUNDS)
-    if (soundOn) new Audio(`/assets/correct_${num}.mp3`).play()
+    if (soundOn) new Audio(`https://leinad.dev/bird/correct_${num}.mp3`).play()
   }
 }
 
