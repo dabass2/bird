@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
+    "vite": "^5.4.11"
   },
   "dependencies": {
     "p5js-wrapper": "^1.2.3",
